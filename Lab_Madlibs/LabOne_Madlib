@@ -12,7 +12,7 @@ friend_name = raw_input('Enter a friends noun:')
 first_adj = raw_input('Enter an adjective:')
 second_adj = raw_input('Enter another adjective:')
 third_adj = raw_input('Enter another adjective:')
-first_number = raw_input('Enter a number:')
+first_number = raw_input('Enter a number of miles:')
 second_number = raw_input('Enter another number:')
 third_number = raw_input('Enter one last number :')
 
@@ -47,8 +47,7 @@ array_adj = [first_adj, second_adj, third_adj]
 
 number = {'number_one': first_number, 'number_two': second_number, 'number_three': third_number}
 
-#this variable was needed to include an element of the dictionary in the text below
-# I didn't really understand why I couldn't use integer['number_one'] instead
+#includes an element of the dictionary in the text below
 new_number = number['number_one']
 
 #for loop - this will allow me to select a different order of the array
@@ -56,21 +55,23 @@ for i in range(0, 2):
     array_adj = [ array_adj[0], array_adj[1], array_adj[2]]
 
 #functions return results from math operations with the input numbers
-def number_calc(x, y, z):
-    return x+y-z
-function_one_result = number_calc(number['number_one'], number['number_two'], number['number_three'])
+def number_calc(a, b, c):
+    return a+b-c
+output_one = number_calc(number['number_one'], number['number_two'], number['number_three'])
+
+#functions return results from math operations with the input numbers
+def number_calc_two(a, b, c):
+    return a*b-c
+output_two = number_calc_two(first_number, second_number, third_number)
 
 
-def number_calc_two(x, y, z):
-    return x*y-z
-function_two_result = number_calc_two(first_number, second_number, third_number)
-
+#story variable
 story = '''
 A long time ago, in a galaxy far, far away....
 
 It is a period of civil war. {your_name}
 striking from a hidden
-base {function_one_result} miles away, has won his first victory
+base {output_one} miles away, has won his first victory
 against the evil Galactic Empire.
 
 During the battle, {friend_name} managed
@@ -87,5 +88,6 @@ freedom to the galaxy...
 
 '''
 
+#print command will display story.format(**locals())
 print story.format(**locals())
 
