@@ -1,0 +1,93 @@
+'''
+Carmine Trovato
+07/08/2014
+Lab: Mad Lib
+'''
+import math
+
+#input fields down below - gather names, adjectives and whole numbers
+your_name = raw_input('Please enter your name:')
+friend_name = raw_input('Please enter a friends noun:')
+
+first_adj = raw_input('Please enter an adjective:')
+second_adj = raw_input('Please enter another adjective:')
+third_adj = raw_input('Please enter another adjective:')
+first_number = raw_input('Please enter a number:')
+second_number = raw_input('Please enter another number:')
+third_number = raw_input('Please enter one last number :')
+
+
+
+# if statements (last one has two logical operators),
+# mathematical operators, assignment operators
+# these "validate" (but not really) the integers - it doesn't validate if the inputs are numbers though
+if first_number:
+    first_number = (int(first_number) + 21)
+    first_number -= 3
+else:
+    first_number = 1
+
+#second if else
+if second_number:
+    second_number = (int(second_number) - 10)
+    second_number += 11
+else:
+    second_number = 4
+
+#third if else
+if third_number and second_number and first_number:
+    third_number = (int(third_number) * 2)
+    third_number /= 2
+    if third_number % 2 != 0:
+        math.floor(third_number)
+else:
+    third_integer = 10
+
+
+#array and dictionary -  store the input data  by users
+array_adj = [first_adj, second_adj, third_adj]
+
+number = {'number_one': first_number, 'number_two': second_number, 'number_three': third_number}
+
+#this variable was needed to include an element of the dictionary in the text below
+# I didn't really understand why I couldn't use integer['number_one'] instead
+new_number = number['number_one']
+
+#for loop - this will allow me to select a different order of the array
+for i in range(0, 2):
+    array_adj = [ array_adj[0], array_adj[1], array_adj[2]]
+
+#functions - functions return results from math operations with the input numbers
+def number_calc(x, y, z):
+    return x+y-z
+function_one_result = number_calc(number['number_one'], number['number_two'], number['number_three'])
+
+
+def number_calc_two(x,y,z):
+    return x*y-z
+function_two_result = number_calc_two(first_number, second_number, third_number)
+
+story = '''
+A long time ago, in a galaxy far, far away....
+
+It is a period of civil war. {your_name}
+striking from a hidden
+base {function_one_result} miles away, has won his first victory
+against the evil Galactic Empire.
+
+During the battle, {friend_name} managed
+to steal {array_adj[1]} secret plans to the Empire's
+ultimate weapon, the Death Star, an
+{array_adj[0]} space station with enough {array_adj[2]}
+power to destroy an entire planet.
+
+Pursued by the Empire's sinister agents,
+{your_name} races home aboard the
+starship, custodian of the stolen plans
+that can save her people and restore
+freedom to the galaxy...
+
+'''
+
+print story.format(**locals())
+

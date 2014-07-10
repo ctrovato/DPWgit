@@ -1,0 +1,18 @@
+'''
+Carmine Trovato
+07/08/2014
+Lab: Mad Lib
+'''
+
+
+large_string = '''
+    Welcome to the python class, {user_name},
+    you are going to do so well in this class
+'''
+
+user_name = raw_input("Type your name:")
+
+
+
+
+print large_string.format(**locals())
