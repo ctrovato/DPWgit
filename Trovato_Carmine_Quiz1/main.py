@@ -13,8 +13,19 @@ def calc_area(w,h):
         print "This is a rectangle of: " + str(w * h) + " square feet"
         return w * h
 
-calc_area(20,10)
-calc_area(4,10)
+#user input
+width = raw_input('Enter Width')
+height = raw_input('Enter Height')
+
+#calc_area for integers width and height
+calc_area(int(width), int(height))
+
 
 #function count_down each time it runs will  count down number of bottles of beer
 def count_down(count):
+    for i in range(count):
+#prints out the count each time
+        print str(count) + " Bottles on the wall. " + str(count) + " Bottles of beer." \
+                                             " Take one down and pass it around. Now you have " + str(count-1) + " bottles of beer on the wall."
+        count -= 1  #count down number of bottles of beer by one
+count_down(10)
