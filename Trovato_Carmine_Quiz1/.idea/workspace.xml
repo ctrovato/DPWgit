@@ -26,8 +26,8 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14150943" vertical-offset="0" max-vertical-offset="742">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.3638814" vertical-offset="0" max-vertical-offset="742">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -162,8 +162,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14150943" vertical-offset="0" max-vertical-offset="742">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.3638814" vertical-offset="0" max-vertical-offset="742">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>

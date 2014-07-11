@@ -8,3 +8,11 @@ Quiz 1
 def calc_area(w,h):
     if w == h:
         print "This is a square of: " + str(w * h) + " square feet, because the width and height are the same."
+
+    else:
+        print "This is a rectangle of: " + str(w * h) + " square feet"
+        return w * h
+
+calc_area(50,50)
+calc_area(50,25)
+
