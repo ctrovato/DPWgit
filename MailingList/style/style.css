@@ -2,8 +2,20 @@ body {
     background-color: #b0c4de;
 }
 
-#wrapper{
-    width: 100%;
+form{
+    width: 350px;
     margin: 0 auto;
+}
+
+h4{
+    color: darkblue;
+}
+
+
+
+.buttonStyle{
+    background-color:white;
+    color: darkblue;
+    border-style: none;
 
 }

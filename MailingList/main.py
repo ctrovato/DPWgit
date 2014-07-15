@@ -56,10 +56,9 @@ class Page(object):
     </head>
     <body>
     '''
-    content = '''Hello There'''
+    content = '''Hello '''
     form_content = '''
         <form method="GET">
-        <div id= "wrapper">
             <h4>Sign Up</h4>
             <input type="text" placeholder="First Name" name= "fname" />
             <br/>
@@ -72,9 +71,8 @@ class Page(object):
             <input type="text" placeholder="Re-Type Password" name= "repass"  />
             <br/>
 
-
         <div id ="dropbox" class="float_left clear">
-        <h4>Newsletter: <br> Would You like to receive Newsletters via Email</h4>
+        <h4>Newsletter: <br> via Email</h4>
         <select name = "marketing">
             <option> Select One</option>
             <option value = "week" name = "week">Yes, Weekly</option>
@@ -83,18 +81,18 @@ class Page(object):
             <option value = "none" name= "none">No, Thank You</option>
         </select>
 
-        <h4>How Would you describe yourself (check all that may apply)</h4>
+        <h4>Describe yourself </br>(check all that may apply)</h4>
             <input type="checkbox"  name= "artistic" value ="Artistic">Artistic<br/>
             <input type="checkbox"  name= "athletic" value ="Athletic">Athletic<br/>
             <input type="checkbox"  name= "music" value ="Music">Music Snob<br/>
             <input type="checkbox"  name= "food" value ="Foodie">Foodie
 
             </div>
+            <br/>
+            <input type="submit" class= "buttonStyle" value="Submit" />
+        </div>
 
-            <input type="submit" value="submit info" />
-        <div>
-            </div>
-</form>
+        </form>
     '''
     closer = '''
     </body>
