@@ -18,12 +18,12 @@ class MainHandler(webapp2.RequestHandler):
 
 
         if self.request.GET:
-            p.content = "First Name:" + self.request.GET['fname']
-            p.content += "<br />Last Name:" + self.request.GET['lname']
-            p.content += "<br />Email:" + self.request.GET['email']
-            p.content += "<br />Password:" + self.request.GET['pass']
-            p.content += "<br />Re-Password:" + self.request.GET['repass']
-            p.content += "<br /> Newsletter:" + self.request.GET['marketing']
+            p.content = "First Name: " + self.request.GET['fname']
+            p.content += "<br />Last Name: " + self.request.GET['lname']
+            p.content += "<br />Email: " + self.request.GET['email']
+            p.content += "<br />Password: " + self.request.GET['pass']
+            p.content += "<br />Re-Password: " + self.request.GET['repass']
+            p.content += "<br /> Newsletter: " + self.request.GET['marketing']
 
             p.content += "<br />Describe Yourself:"
 
