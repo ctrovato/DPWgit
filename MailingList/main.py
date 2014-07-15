@@ -68,7 +68,7 @@ class Page(object):
             <br/>
             <input type="password" class="formfield" placeholder="Enter Password" name= "pass"  />
             <br/>
-            <input type="text" class="formfield" placeholder="Re-Enter Password" name= "repass"  />
+            <input type="password" class="formfield" placeholder="Re-Enter Password" name= "repass"  />
             <br/>
 
         <div id ="dropbox" class="float_left clear">
