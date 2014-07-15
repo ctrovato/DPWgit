@@ -3,19 +3,27 @@ body {
 }
 
 form{
-    width: 350px;
+    width: 400px;
     margin: 0 auto;
+}
+
+h3{
+    color: darkblue;
+    padding-left: 90px;
 }
 
 h4{
     color: darkblue;
 }
 
-
+.formfield{
+    width: 250px;
+}
 
 .buttonStyle{
-    background-color:white;
-    color: darkblue;
+    background-color: darkblue;
+    color: white;
     border-style: none;
+    width: 250px;
 
 }

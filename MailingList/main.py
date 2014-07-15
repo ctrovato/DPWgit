@@ -59,16 +59,16 @@ class Page(object):
     content = '''Hello '''
     form_content = '''
         <form method="GET">
-            <h4>Sign Up</h4>
-            <input type="text" placeholder="First Name" name= "fname" />
+            <h3 class"header">Sign Up</h3>
+            <input type="text" class="formfield"  placeholder="First Name" name= "fname" />
             <br/>
-            <input type="text" placeholder="Last Name" name= "lname"  />
+            <input type="text" class="formfield" placeholder="Last Name" name= "lname"  />
             <br/>
-            <input type="text" placeholder="Email Address" name= "email"  />
+            <input type="text" class="formfield" placeholder="Email Address" name= "email"  />
             <br/>
-            <input type="password" placeholder="Enter Password" name= "pass"  />
+            <input type="password" class="formfield" placeholder="Enter Password" name= "pass"  />
             <br/>
-            <input type="text" placeholder="Re-Type Password" name= "repass"  />
+            <input type="text" class="formfield" placeholder="Re-Enter Password" name= "repass"  />
             <br/>
 
         <div id ="dropbox" class="float_left clear">
