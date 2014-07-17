@@ -29,7 +29,7 @@ class Television(object):
         '''
         self.header = '''
         <header>
-            <h1>Top-Rated Television & Package Deals</h1>
+            <h1>Top-Rated Televisions & Package Deals</h1>
 
         </header>
         '''
