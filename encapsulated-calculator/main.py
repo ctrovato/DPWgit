@@ -62,6 +62,23 @@ class MainHandler(webapp2.RequestHandler):
         insignia.final_tax = (insignia.price + insignia.sound + insignia.bluray + insignia.warranty)
         insignia.total = insignia.price + insignia.sound + insignia.bluray + insignia.warranty
 
+#====== defines which object will print depending on what is clicked
+
+        if self.request.GET:
+                the_television = self.request.GET["television"]
+                if the_television == "samsung":
+                    self.response.write(samsung.print_out())
+                elif the_television == "sony":
+                    self.response.write(sony.print_out())
+                elif the_television == "lg":
+                    self.response.write(lg.print_out())
+                elif the_television == "vizio":
+                    self.response.write(vizio.print_out())
+                elif the_television == "insignia":
+                    self.response.write(insignia.print_out())
+        else:
+            self.response.write(samsung.print_out())
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
