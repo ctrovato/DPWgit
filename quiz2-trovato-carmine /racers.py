@@ -15,5 +15,4 @@ class Racers(object):
     def update(self):
         self.all = self.__title + "</br>" + "Racer Name: " + self._name +"</br>Racer Brand: " + self._brand +\
                    "</br>Racer Speed: " + str(self._speed) + "km/h" + "</br>Racer Class: " + self._class + \
-                     "</br>This is the number of titles:" + str(self._titles) +\
                    "</br>Racer age: " + str(self._age)+ "</br> </br>"

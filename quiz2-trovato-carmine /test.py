@@ -13,6 +13,6 @@ class American(Racers):
 
 def update(self):
         self.all = "</br>" + "Racer Name: " + self._name + "</br>Racer Age: " + str(self._age) + \
-                   "</br>Player Position: " + self._position + "</br>Racer Speed: " + str(self._speed) + "km/h" +\
+                   "</br>Racer Brand: " + self._brand + "</br>Racer Speed: " + str(self._speed) + "km/h" +\
                    "</br>Racer Class: " + self._class + \
                    "</br>" + self._titles + "</br>"
