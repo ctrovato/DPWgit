@@ -28,11 +28,11 @@ h2#firstH2{
     margin-left: 20px;
 }
 div{
-    width: 45%;
-    padding: 1%;
+    width: 30%;
+    padding: 4%;
     float: left;
     font-size: 1.5em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 p{
     padding-bottom: 0;
