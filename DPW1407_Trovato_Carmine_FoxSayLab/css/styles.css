@@ -42,7 +42,11 @@ h1{
     padding-top:35px;
     padding-bottom:25px;
     text-align: center;
-    font-size: 2.2em;
+    font-size: 2em;
+}
+
+p{
+    font-size: 1.2em;
 }
 
 
@@ -81,8 +85,8 @@ div{
     font-family: 'Ubuntu Mono', ;
 }
 div#info p{
-    margin-top: 19px;
-    margin-bottom: 19px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 }
 span{
@@ -144,7 +148,7 @@ nav ul li{
 }
 nav ul li a{
     background: rgb(240,240,240);
-    padding-top: 10px;
+    padding-top: 15px;
 }
 nav ul li a{
     font-size: 2em;

@@ -16,9 +16,9 @@ class HTML(object):
         <h1>What does the Fox Say ???</h1>
         <nav>
             <ul>
-                <li><a href="?animal=fox">The Fox</a></li>
-                <li><a href="?animal=wolf">The Wolf</a></li>
-                <li><a href="?animal=rabbit">The Rabbit</a></li>
+                <li><a href="?animal=fox">Red Fox</a></li>
+                <li><a href="?animal=wolf"> Grey Wolf</a></li>
+                <li><a href="?animal=rabbit">Belgian Rabbit</a></li>
 
             </ul>
         </nav>

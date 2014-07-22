@@ -6,7 +6,7 @@ class Animal(object):
         self.__title1 = "What did the Fox say?"
         self._title = ""
         self._font = "http://fonts.googleapis.com/css?family=Ubuntu+Mono:400italic' rel='stylesheet' type='text/css'"
-        self._animal = "The animal"
+        self._animal = ""
         self._fox = ""
         self._phylum = ""
         self._class_ = ""
