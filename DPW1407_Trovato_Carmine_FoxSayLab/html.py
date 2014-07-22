@@ -11,6 +11,7 @@ class Html(object):
         <link href={self._font} rel="stylesheet" type="text/css">
         <script src="js/modernizr.2.5.3.min.js"></script>
 
+
     </head>
     <header>
         <h1>What does the Fox Say? Lab</h1>
