@@ -22,3 +22,56 @@ class Animal(object):
         self._open = ""
         self._content = ""
         self._close = ""
+
+
+    @property
+    def main_title(self):
+        return self.__title1
+
+
+    @property
+    def title(self):
+        return self._title
+
+    @title.setter
+    def title(self, new_title):
+        self._title = new_title
+
+
+
+    @property
+    def animal(self):
+        return self._animal
+
+    @animal.setter
+    def animal(self, new_animal):
+        if new_animal == "":
+            self._animal = self._animal
+        else:
+            self._animal = new_animal
+
+
+
+    @property
+    def sound(self):
+        return self.__sound
+
+    @sound.setter
+    def sound(self, new_sound):
+        if new_sound == "":
+            self.__sound = self.__sound
+        else:
+            self.__sound = new_sound
+
+
+    @property
+    def css(self):
+        return self.__css_url
+
+    def print_out(self):
+        self.update()
+        return self.all
+
+    def update(self):
+        self.all = self._open + self._content + self._close
+        #self.all = self.all.format(**locals())

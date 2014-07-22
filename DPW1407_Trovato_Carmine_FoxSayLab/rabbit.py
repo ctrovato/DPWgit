@@ -9,7 +9,7 @@ class Rabbit(Animal, Html):
         Animal.__init__(self)
         Html.__init__(self)
         self.title = "The Rabbit"
-        self.animal = "RABBIT"
+        self.animal = "Rabbit"
         self._phylum = "Chordata"
         self._class_ = "Mammalia"
         self._order = "Lagomorpha"

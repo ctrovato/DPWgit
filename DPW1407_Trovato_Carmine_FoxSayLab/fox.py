@@ -12,7 +12,7 @@ class Fox(Animal, Html):
         self.__css_url = ""
 
         self.title = "The Fox"
-        self.animal = "FOX"
+        self.animal = "Fox"
         self._phylum = "Chordata"
         self._class_ = "Mammalia"
         self._order = "Carnivora"
