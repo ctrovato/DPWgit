@@ -8,7 +8,7 @@ class Fox(Animal, Html):
         #call constructor functions
         Animal.__init__(self)
         Html.__init__(self)
-        #the property below is just a test to make sure my main stylesheet was protected
+
         self.__css_url = ""
 
         self.title = "The Fox"
@@ -27,8 +27,7 @@ class Fox(Animal, Html):
         self._body_id = "fox"
         self._link = "flickr.com"
 
-    #this is the polymorphic function. It updates the html for every different animal and
-    # overwrites the following super class functions: title(), animal(), and sound()
+
     def update(self):
         self.all = self._open + self._content + self._close
         self.all = self.all.format(**locals())

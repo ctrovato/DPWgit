@@ -13,16 +13,15 @@ from wolf import Wolf
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        #objects made from the subclasses
+        #objects
         f = Fox()
         w = Wolf()
         r = Rabbit()
 
-        #array made from the objects instantiated above
+        #array of objects
         the_animals = [f, w, r]
 
-        # conditions for the pages to be printed out according to the link clicked
-        # defaults to the rabbit page
+
         if self.request.GET:
             animal = self.request.GET["animal"]
             if animal == "rabbit":
