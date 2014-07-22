@@ -16,7 +16,7 @@ class Animal(object):
         self._avg_lifespan = ""
         self._habitat = ""
         self._geo_location = ""
-        self.__sound = "sound"
+        self.__sound = ""
         self._body_id = ""
         self._link = ""
         self._open = ""
@@ -74,4 +74,3 @@ class Animal(object):
 
     def update(self):
         self.all = self._open + self._content + self._close
-        #self.all = self.all.format(**locals())

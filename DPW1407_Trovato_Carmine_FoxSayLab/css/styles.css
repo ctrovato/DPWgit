@@ -1,6 +1,26 @@
 
 
+
 body#rabbit{
+    width: 100%;
+    font-family: 'Ubuntu Mono', ;
+    color: rgb(245,245,245);
+    margin-left:0;
+    margin-top:0;
+    background-color: #008761;
+    background-image: url(http://www.transparenttextures.com/patterns/always-grey.png);
+
+}
+body#wolf{
+    width: 100%;
+    font-family: 'Ubuntu Mono', ;
+    margin-left:0;
+    margin-top:0;
+    color: rgb(245,245,245);
+    background-color: #00acb8;
+    background-image: url(http://www.transparenttextures.com/patterns/always-grey.png);
+}
+body#fox{
     width: 100%;
     font-family: 'Ubuntu Mono', ;
     color: rgb(245,245,245);
@@ -8,4 +28,22 @@ body#rabbit{
     margin-top:0;
     background-color: #8a7800;
     background-image: url(http://www.transparenttextures.com/patterns/always-grey.png);
-}}
+}
+
+/*
+======= Header ======
+*/
+header{
+    overflow: hidden;
+    margin-top: 0;
+}
+h1{
+    margin-bottom:0;
+    margin-top:0;
+    padding-top:35px;
+    padding-bottom:25px;
+    text-align: center;
+    font-size: 2.2em;
+}
+
+

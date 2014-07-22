@@ -17,9 +17,9 @@ class Html(object):
         <h1>What does the Fox Say? Lab</h1>
         <nav>
             <ul>
+                <li><a href="?animal=fox">The Fox</a></li>
                 <li><a href="?animal=rabbit">The Rabbit</a></li>
                 <li><a href="?animal=wolf">The Wolf</a></li>
-                <li><a href="?animal=fox">The Fox</a></li>
             </ul>
         </nav>
     </header>
@@ -28,30 +28,28 @@ class Html(object):
         self._content = '''
         </div>
         <div id="info">
-            <h2>Information about the {self.animal}</h2>
+            <h2>{self.animal} Information</h2>
             <p><span>Phylum:</span> {self._phylum}</p>
             <p><span>Class:</span> {self._class_}</p>
             <p><span>Order:</span> {self._order}</p>
             <p><span>Family:</span> {self._family}</p>
             <p><span>Genus:</span> {self._genus}</p>
-            <p><span>Average Life Span:</span> {self._avg_lifespan}</p>
+            <p><span>Avg Life Span:</span> {self._avg_lifespan}</p>
             <p><span>Habitat:</span> {self._habitat}</p>
-            <p><span>Geographic Location:</span> {self._geo_location}</p>
-            <p><span>Typical sound emitted:</span> {self.sound}</p>
+            <p><span>Geo Location:</span> {self._geo_location}</p>
+            <p><span>Sound:</span> {self.sound}</p>
         </div>
         <div id ="image">
-            <h2 id="animal_image">This is the {self.animal}</h2>
+            <h2 id="animal_image">Animal: {self.animal}</h2>
             <figure>
                 <img id ="the_fox" src="{self._fox}" alt="">
                 <img id ="the_image" src="{self._url}" alt="{self.animal}">
-                <figcaption>Original image can be found at <a href ="{self._url}" target="_blank">{self._link}</a></figcaption>
             </figure>
         </div>
         '''
 
         self._close = '''
-        <script src="js/jquery-1.11.0.min.js"></script>
-        <script src="js/init.js"></script>
+
     </body>
 </html>
         '''
