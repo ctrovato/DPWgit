@@ -1,13 +1,13 @@
 __author__ = 'CarmineTrovato'
 
 from animals import Animal
-from html import Html
+from html import HTML
 
-class Rabbit(Animal, Html):
+class Rabbit(Animal, HTML):
     def __init__(self):
         #constructor function
         Animal.__init__(self)
-        Html.__init__(self)
+        HTML.__init__(self)
         self.title = "The Rabbit"
         self.animal = "Rabbit"
         self._phylum = "Chordata"
@@ -21,7 +21,6 @@ class Rabbit(Animal, Html):
         self._geo_location = "North, South America, Asia, Europe, Africa, Australia"
         self.sound = "Weening"
         self._body_id = "rabbit"
-        self._link = "wikimedia.com"
 
 
     def update(self):

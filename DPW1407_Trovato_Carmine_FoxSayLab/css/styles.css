@@ -1,14 +1,13 @@
 
 
-
 body#rabbit{
     width: 100%;
     font-family: 'Ubuntu Mono', ;
-    color: rgb(245,245,245);
+    color: rgb(225,225,225);
     margin-left:0;
     margin-top:0;
-    background-color: #008761;
-    background-image: url(http://www.transparenttextures.com/patterns/always-grey.png);
+    background-color: #b5a477;
+    background-image: url(http://www.transparenttextures.com/patterns/black-linen.png);
 
 }
 body#wolf{
@@ -16,22 +15,22 @@ body#wolf{
     font-family: 'Ubuntu Mono', ;
     margin-left:0;
     margin-top:0;
-    color: rgb(245,245,245);
-    background-color: #00acb8;
-    background-image: url(http://www.transparenttextures.com/patterns/always-grey.png);
+    color: rgb(235,235,235);
+    background-color: #4586B8;
+    background-image: url(http://www.transparenttextures.com/patterns/black-linen.png);
 }
 body#fox{
     width: 100%;
     font-family: 'Ubuntu Mono', ;
-    color: rgb(245,245,245);
+    color: rgb(235,235,235);
     margin-left:0;
     margin-top:0;
-    background-color: #8a7800;
-    background-image: url(http://www.transparenttextures.com/patterns/always-grey.png);
+    background-color: #b58200;
+    background-image: url(http://www.transparenttextures.com/patterns/black-linen.png);
 }
 
 /*
-======= Header ======
++++++++++++++  HEADER +++++++++++++
 */
 header{
     overflow: hidden;
@@ -45,5 +44,145 @@ h1{
     text-align: center;
     font-size: 2.2em;
 }
+
+
+
+
+/*
++++++++++++++  H1   H2  +++++++++++++
+*/
+h1, h2{
+    text-transform: uppercase;
+}
+h2{
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #B8B8B8 ;
+}
+
+h2#animal_image{
+    margin-left: 7.3%;
+}
+
+
+
+
+/*
++++++++++++++  DIVs +++++++++++++
+*/
+div{
+    width: 47%;
+    float: left;
+    padding-left:3%;
+    padding-right:0;
+    margin-left:0;
+    margin-right:0;
+    margin-top: 50px;
+    font-family: 'Ubuntu Mono', ;
+}
+div#info p{
+    margin-top: 19px;
+    margin-bottom: 19px;
+}
+}
+span{
+    font-size: 1.2em;
+}
+
+/*
+
++++++++++++ IMAGES +++++++++++++
+*/
+img{
+    width: 77%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px black;
+}
+figure{
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+
+
+/*
++++++++++++++ ANIMAL STYLING +++++++++++++
+*/
+#rabbit h1{
+   background: rgba(66,94,72,.8);
+}
+#fox h1{
+   background: rgba(77,69,14,.8);
+}
+#wolf h1{
+   background: rgba(96,96,96,.8);
+}
+
+
+
+
+
+/*
++++++++++++++  NAVIGATION  +++++++++++++
+*/
+nav{
+    float: left;
+    width: 100%;
+    margin-left:0;
+}
+ul{
+    padding-left:0;
+    margin-top:0;
+}
+nav ul li{
+    list-style: none;
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    box-shadow: 0 0 3px black;
+    margin-bottom: 5px;
+}
+nav ul li a{
+    background: rgb(240,240,240);
+    padding-top: 10px;
+}
+nav ul li a{
+    font-size: 2em;
+    display:block;
+}
+
+
+
+#rabbit nav ul li a{
+   color: rgb(81,117,82);
+}
+#rabbit nav ul li a:hover{
+   color: rgb(46,74,52);
+   background: rgba(240,240,240, .8);
+}
+
+
+
+#wolf nav ul li a{
+   color: rgb(102,102,102);
+}
+#wolf nav ul li a:hover{
+   color: rgb(76,76,76);
+   background: rgba(240,240,240, .8);
+}
+
+
+
+#fox nav ul li a{
+   color: rgb(107,99,44);
+}
+#fox nav ul li a:hover{
+   color: rgb(77,69,14);
+   background: rgba(240,240,240, .8);
+}
+
+
+
+
 
 

@@ -1,13 +1,13 @@
 __author__ = 'CarmineTrovato'
 
 from animals import Animal
-from html import Html
+from html import HTML
 
-class Fox(Animal, Html):
+class Fox(Animal, HTML):
     def __init__(self):
         #constructor functions
         Animal.__init__(self)
-        Html.__init__(self)
+        HTML.__init__(self)
 
         self.__css_url = ""
 
@@ -22,9 +22,8 @@ class Fox(Animal, Html):
         self._avg_lifespan = "Five years"
         self._habitat = "Woodlands"
         self._geo_location = "North America, Asia, Europe Australia"
-        self.sound = "howl"
+        self.sound = "Howling"
         self._body_id = "fox"
-        self._link = "flickr.com"
 
 
     def update(self):

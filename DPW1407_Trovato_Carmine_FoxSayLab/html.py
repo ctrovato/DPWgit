@@ -1,6 +1,6 @@
 __author__ = 'CarmineTrovato'
 
-class Html(object):
+class HTML(object):
     def __init__(self):
         self._open = '''
 <!DOCTYPE html>
@@ -9,17 +9,17 @@ class Html(object):
         <title>{self.main_title} | {self.title}</title>
         <link rel="stylesheet" type="text/css" href={self.css}>
         <link href={self._font} rel="stylesheet" type="text/css">
-        <script src="js/modernizr.2.5.3.min.js"></script>
-
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400italic' rel='stylesheet' type='text/css'>
 
     </head>
     <header>
-        <h1>What does the Fox Say? Lab</h1>
+        <h1>What does the Fox Say ???</h1>
         <nav>
             <ul>
                 <li><a href="?animal=fox">The Fox</a></li>
-                <li><a href="?animal=rabbit">The Rabbit</a></li>
                 <li><a href="?animal=wolf">The Wolf</a></li>
+                <li><a href="?animal=rabbit">The Rabbit</a></li>
+
             </ul>
         </nav>
     </header>
@@ -28,7 +28,7 @@ class Html(object):
         self._content = '''
         </div>
         <div id="info">
-            <h2>{self.animal} Information</h2>
+            <h2>Description of the {self.animal}</h2>
             <p><span>Phylum:</span> {self._phylum}</p>
             <p><span>Class:</span> {self._class_}</p>
             <p><span>Order:</span> {self._order}</p>
@@ -40,7 +40,7 @@ class Html(object):
             <p><span>Sound:</span> {self.sound}</p>
         </div>
         <div id ="image">
-            <h2 id="animal_image">Animal: {self.animal}</h2>
+            <h2 id="animal_image">Image of the {self.animal}</h2>
             <figure>
                 <img id ="the_fox" src="{self._fox}" alt="">
                 <img id ="the_image" src="{self._url}" alt="{self.animal}">

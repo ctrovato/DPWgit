@@ -21,7 +21,6 @@ class MainHandler(webapp2.RequestHandler):
         #array of objects
         the_animals = [f, w, r]
 
-
         if self.request.GET:
             animal = self.request.GET["animal"]
             if animal == "rabbit":
