@@ -5,7 +5,7 @@ from html import Html
 
 class Fox(Animal, Html):
     def __init__(self):
-        #call constructor functions
+        #constructor functions
         Animal.__init__(self)
         Html.__init__(self)
 
@@ -22,7 +22,7 @@ class Fox(Animal, Html):
         self._fox = "images/megan_fox.jpeg"
         self._avg_lifespan = "Five years"
         self._habitat = "Woodlands"
-        self._geo_location = "North America"
+        self._geo_location = "North America, Asia, Europe Australia"
         self.sound = "howl"
         self._body_id = "fox"
         self._link = "flickr.com"
