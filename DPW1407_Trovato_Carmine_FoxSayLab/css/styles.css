@@ -82,7 +82,7 @@ div{
     margin-left:0;
     margin-right:0;
     margin-top: 50px;
-    font-family: 'Ubuntu Mono', ;
+    font-family: 'Ubuntu Mono',;
 }
 div#info p{
     margin-top: 25px;
@@ -98,7 +98,7 @@ span{
 +++++++++++ IMAGES +++++++++++++
 */
 img{
-    width: 77%;
+    width: 80%;
     border-radius: 15px;
     box-shadow: 10px 10px 20px black;
 }
@@ -113,7 +113,7 @@ figure{
 +++++++++++++ ANIMAL STYLING +++++++++++++
 */
 #rabbit h1{
-   background: rgba(66,94,72,.8);
+   background: rgba(60,90,62,.8)
 }
 #fox h1{
    background: rgba(77,69,14,.8);
