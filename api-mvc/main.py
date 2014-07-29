@@ -86,7 +86,7 @@ class WeatherModel(object):
 class WeatherDataObject(object):
     """this class is just a big associtive array for holding  the info we need """
     def __init__(self):
-        self. = 0
+        self.high = 0
         self.low = 0
         self.code = 0
         self.description = ""
