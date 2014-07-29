@@ -7,16 +7,14 @@ DPW Quiz Three
 
 import webapp2
 
-
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        f = Submission()
+        f = Submit()
         f._inputs = [{'type': 'text', 'placeholder': 'First Name', 'name': 'fname'},
                      {'type': 'text', 'placeholder': 'Middle Name', 'name': 'mname'},
                      {'type': 'text', 'placeholder': 'Last Name', 'name': 'lname'},
                      {'type': 'submit', 'name': 'submit', 'value': 'Enter'}]
         self.response.write(f.print_out())
-
 
 class Display(object):
     _head = """<!DOCTYPE HTML>
@@ -30,16 +28,13 @@ class Display(object):
 </body>
 </html>"""
 
-
-class Submission(Display):
+class Submit(Display):
     _inputs = ''
     form_start = "<form method=GET action=""/>"
     form_end = "</form>"
 
     def __init__(self):
         Display.__init__(self)
-
-
 
     def inputinfo(self):
         _inputs=''
@@ -55,7 +50,6 @@ class Submission(Display):
     def print_out(self):
         return self._head + self.form_start + self.inputinfo() + \
             self.form_end + self._close
-
 
 app = webapp2.WSGIApplication([
                                   ('/', MainHandler)
