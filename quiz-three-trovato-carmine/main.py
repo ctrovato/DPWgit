@@ -13,11 +13,14 @@ class MainHandler(webapp2.RequestHandler):
         f._inputs = [{'type': 'text', 'placeholder': 'First Name', 'name': 'fname'},
                      {'type': 'text', 'placeholder': 'Middle Name', 'name': 'mname'},
                      {'type': 'text', 'placeholder': 'Last Name', 'name': 'lname'},
+                     {'type': 'email', 'placeholder': 'Email', 'name': 'email'},
+                     {'type': 'text', 'placeholder': 'Phone Number', 'name': 'pumber'},
                      {'type': 'submit', 'name': 'submit', 'value': 'Enter'}]
         self.response.write(f.print_out())
 
-class Display(object):
-    _head = """<!DOCTYPE HTML>
+class View(object):
+    _head = """
+<!DOCTYPE HTML>
 <head>
     <title>Carmine Trovato Quiz 4</title>
 </head>
@@ -28,13 +31,13 @@ class Display(object):
 </body>
 </html>"""
 
-class Submit(Display):
+class Submit(View):
     _inputs = ''
     form_start = "<form method=GET action=""/>"
     form_end = "</form>"
 
     def __init__(self):
-        Display.__init__(self)
+        View.__init__(self)
 
     def inputinfo(self):
         _inputs=''

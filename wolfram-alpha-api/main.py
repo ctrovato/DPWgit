@@ -13,7 +13,7 @@ from xml.dom import minidom
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         q = QueryPage()
-        q.inputs =[{'type' : 'search', 'placeholder':'What are you looking for?', 'name': 'search'}]
+        q.inputs =[{'type': 'search', 'placeholder':'What are you looking for?', 'name': 'search'}]
 
         if self.request.GET:
 
@@ -87,7 +87,9 @@ class QueryPage():
         tot_inputs = ''
         for i in self.__input:
 
-        return tot_input
+        return input
+
+
 
 #This function overides the print function
     def print_out(self):
