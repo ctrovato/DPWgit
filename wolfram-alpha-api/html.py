@@ -3,6 +3,7 @@ __author__ = 'CarmineTrovato'
 class HTML(object):
     def __init__(self):
         self._open = '''
+
 <!DOCTYPE html>
 <html>
 
@@ -24,11 +25,15 @@ class HTML(object):
 
 <div id="search">
 
-<form action="javascript:void(0);" method="GET">
+<form action="/" method="GET">
+
+
 
 <fieldset class="clearfix">
+'''
+    _content = '''
 
-<input type="search" name="search" value="What are you looking for?" onBlur="if(this.value=='')this.value='What are you looking for?'" onFocus="if(this.value=='What are you looking for?')this.value='' "> <!-- JS because of IE support; better: placeholder="What are you looking for?" -->
+<input type="search" name="search" value="What are you looking for?" onBlur="if(this.value=='')this.value='What are you looking for?'" onFocus="if(this.value=='What are you looking for?')this.value='' ">
 <input type="submit" value="Search" class="button">
 
 </fieldset>
@@ -40,9 +45,23 @@ class HTML(object):
 </div> <!-- end container -->
 '''
 
-        self._close = '''
+    _close = '''
 
     </body>
 </html>
 '''
+    def __init__(self):
+        pass
+
+    def print_out(self):
+        return self._open + self._content + self._close
+
+
+
+#This function overides the print function
+    def print_out(self):
+        return self._open + self._content + self._close
+
+        #accept an array of dictionaries
+        #use it to build
 

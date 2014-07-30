@@ -9,6 +9,7 @@ DPW1407 Wolfram API
 # urlfetch.set_default_fetch_deadline(45)
 import webapp2
 from urllib import quote
+from html import HTML
 import urllib2
 from xml.dom import minidom
 
@@ -75,16 +76,12 @@ class Page(object):
 
 
 
-
-
-
 #This function overides the print function
     def print_out(self):
         return self._head + self._content + self._close
 
         #accept an array of dictionaries
         #use it to build
-
 
 
 
