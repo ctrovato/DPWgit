@@ -5,23 +5,26 @@ DPW1407 Wolfram API
 '''
 
 
-
+# from google.appengine.api import urlfetch
+# urlfetch.set_default_fetch_deadline(45)
 import webapp2
+from urllib import quote
 import urllib2
 from xml.dom import minidom
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        q = QueryPage()
-        q.inputs =[{'type': 'search', 'placeholder':'What are you looking for?', 'name': 'search'}]
+        q = Page()
 
         if self.request.GET:
+            search = self.request.GET['search']
 
-        wolframModel = wolframModel()
-        wolframModel.search('pi')
+            wolframModel = WolframModel()
+            answer = wolframModel.search(search)
+            q._content += answer
 
 
-        # self.response.write(q.print_out())
+        self.response.write(q.print_out())
 
 
 class ResultsDataObject(object):
@@ -51,9 +54,16 @@ class Page(object):
 <head>
     <title>WolfRamAlpha API</title>
 </head>
-<body>"""
-    _content = ''
+<body><div class='wrapper'>
+"""
+    _content = '''
+    <form action="/">
+    <input type = 'search' placeholder = 'What are you looking for?' name = "search" >
+    <input type="submit" value="Search" class="button">
+    </form>
+'''
     _close = """
+</div>
 </body>
 </html>"""
 
@@ -65,35 +75,12 @@ class Page(object):
 
 
 
-class QueryPage():
-    _form_open = "<form method=\"GET\" action=""  />"
-    _form_close = "</form>"
-    additional_view = ""
-
-
-    def __init__(self):
-        #invoke constructor in superclass
-        QueryPage.__init__(self)
-
-    @property
-    def input(self):
-        pass
-
-    @input.setter
-    def input(self, i):
-        self.__input = i
-
-    def create_inputs(self):
-        tot_inputs = ''
-        for i in self.__input:
-
-        return input
 
 
 
 #This function overides the print function
     def print_out(self):
-        return self._head + self._form_open + self.create_inputs() + self._form_close + self.additional_view + self._close
+        return self._head + self._content + self._close
 
         #accept an array of dictionaries
         #use it to build
@@ -104,25 +91,36 @@ class QueryPage():
 class WolframModel(object):
 
     def __init__(self):
-        self.url = "http://api.wolframalpha.com/v2/query?appid=GGEKR4-H8KK93WL94&input=pi"
+        self.url = "http://api.wolframalpha.com/v2/query?appid=GGEKR4-H8KK93WL94&input="
 
-    def results(self, query):
+    def search(self, query):
+
+        safeQuery = quote(query, safe="%/:=&?~#+!$,;'@()*[]")
+
         #creates a request to send to server
-        request = urllib2.Request(self.url)
+        request = urllib2.Request(self.url + safeQuery)
         opener = urllib2.build_opener()
         xmldoc = opener.open(request)
         xmlobject = minidom.parse(xmldoc)
         pods = xmlobject.getElementsByTagName("pod")
 
-        searchResult = pods[1].getElementsByTagName("subpod")[0].getElementsByTagName("plaintext")[0].firstChild.nodeValue
+        for pod in pods:
+            if pod.attributes.has_key('primary'):
+                answer = pod.getElementsByTagName("plaintext")[0].firstChild.nodeValue
+                return answer
 
-        dataObject = ResultsDataObject();
+        return ''
 
-        dataObject.plaintext = pods[1].getElementsByTagName("subpod")[0].getElementsByTagName("plaintext")[0].firstChild.nodeValue
-        dataObject.img = pods[1].getElementsByTagName("subpod")[0].getElementsByTagName("img")[0].firstChild.nodeValue
-
-
-        return dataObject
+        # searchResult = pods[1].getElementsByTagName("subpod")[0].getElementsByTagName("plaintext")[0].firstChild.nodeValue
+        #
+        # dataObject = ResultsDataObject();
+        #
+        # dataObject.plaintext = pods[1].getElementsByTagName("subpod")[0].getElementsByTagName("plaintext")[0].firstChild.nodeValue
+        # dataObject.img = pods[1].getElementsByTagName("subpod")[0].getElementsByTagName("img")[0].firstChild.nodeValue
+        #
+        # dataObject.primary = pods[1].getElementsByTagName("subpod")[0].getElementsByTagName("primary")[0].firstChild.nodeValue
+        #
+        # return dataObject
 
 
 app = webapp2.WSGIApplication([

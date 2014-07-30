@@ -104,6 +104,7 @@ class Page(object):
 </head>
 <body>"""
     _content = ''
+
     _close = """
 </body>
 </html>"""
