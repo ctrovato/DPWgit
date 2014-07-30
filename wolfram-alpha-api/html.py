@@ -1,8 +1,10 @@
 __author__ = 'CarmineTrovato'
 
-class HTML(object):
+class HTML (object):
     def __init__(self):
-        self._open = '''
+        pass
+
+    _open = '''
 
 <!DOCTYPE html>
 <html>
@@ -12,12 +14,15 @@ class HTML(object):
 <title>WolfSearchAPI</title>
 
 
-<link rel="stylesheet" type="text/css" href={self.css}>
-<link href={self._font} rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
 <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 
 </head>
+
+'''
+    _content = '''
 
 <body>
 
@@ -30,11 +35,11 @@ class HTML(object):
 
 
 <fieldset class="clearfix">
-'''
-    _content = '''
 
-<input type="search" name="search" value="What are you looking for?" onBlur="if(this.value=='')this.value='What are you looking for?'" onFocus="if(this.value=='What are you looking for?')this.value='' ">
-<input type="submit" value="Search" class="button">
+
+
+<input type="search" name='search' class='search' value="What are you looking for?" onBlur="if(this.value=='')this.value='What are you looking for?'" onFocus="if(this.value=='What are you looking for?')this.value='' ">
+<input type="submit" value="Search" id="button">
 
 </fieldset>
 

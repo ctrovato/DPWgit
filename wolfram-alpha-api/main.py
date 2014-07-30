@@ -15,7 +15,7 @@ from xml.dom import minidom
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        q = Page()
+        q = HTML()
 
         if self.request.GET:
             search = self.request.GET['search']
@@ -36,6 +36,7 @@ class ResultsDataObject(object):
         self.plaintext = ""
         self.subpod = ""
         self.img = ""
+        self._font = "http://fonts.googleapis.com/css?family=Open+Sans 'rel='stylesheet"
 
 
 class SearchView(object):
@@ -48,40 +49,46 @@ class SearchView(object):
         pass
 
 
-
-class Page(object):
-
-    _head = """<!DOCTYPE HTML>
-<head>
-    <title>WolfRamAlpha API</title>
-</head>
-<body><div class='wrapper'>
-"""
-    _content = '''
-    <form action="/">
-    <input type = 'search' placeholder = 'What are you looking for?' name = "search" >
-    <input type="submit" value="Search" class="button">
-    </form>
-'''
-    _close = """
-</div>
-</body>
-</html>"""
-
-    def __init__(self):
-        pass
-
-    def print_out(self):
-        return self._head + self._content + self._close
-
-
-
-#This function overides the print function
-    def print_out(self):
-        return self._head + self._content + self._close
-
-        #accept an array of dictionaries
-        #use it to build
+#
+# class Page(object):
+#
+#     _head = """<!DOCTYPE HTML>
+# <head>
+#     <title>WolfRamAlpha API</title>
+#     <link rel="stylesheet" href="css/style.css" type="text/css" />
+#     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+# </head>
+# <body><div class='wrapper'>
+#
+# """
+#     _content = '''
+#     <form action="/">
+#     <fieldset class="clearfix">
+#     <h3>SEARCH</h3>
+#     <input type = 'search' id = 'search' placeholder = 'What are you looking for?' name = "search" >
+#     <input type="submit" value="Search" class="button">
+#     </fieldset>
+#     </form>
+# '''
+#     _close = """
+# </div>
+# </body>
+# </html>"""
+#
+#     def __init__(self):
+#         pass
+#
+#     def print_out(self):
+#         return self._head + self._content + self._close
+#
+#
+#
+# #This function overides the print function
+#     def print_out(self):
+#         return self._head + self._content + self._close
+#
+#         #accept an array of dictionaries
+#         #use it to build
 
 
 
