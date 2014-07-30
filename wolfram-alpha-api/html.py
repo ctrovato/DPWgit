@@ -30,6 +30,8 @@ class HTML (object):
 
 <div id="search">
 
+
+<h3 class="logo">Wolfram-Alpha API</h3>
 <form action="/" method="GET">
 
 
@@ -38,8 +40,9 @@ class HTML (object):
 
 
 
-<input type="search" name='search' class='search' value="What are you looking for?" onBlur="if(this.value=='')this.value='What are you looking for?'" onFocus="if(this.value=='What are you looking for?')this.value='' ">
-<input type="submit" value="Search" id="button">
+<input type="search" name='search' class='search' value="Ask me anything..." onBlur="if(this.value=='')this.value='Ask me anything...'" onFocus="if(this.value=='Ask me anything...')this.value='' ">
+
+<input type="submit" value="Find" id="button">
 
 </fieldset>
 
