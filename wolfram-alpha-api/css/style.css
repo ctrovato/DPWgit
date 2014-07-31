@@ -47,6 +47,20 @@ div#search h3.logo{
 }
 
 
+.resultsHeader{
+    margin-top: 40px;
+    color: white;
+}
+
+.results{
+    color: #1bba9a;
+    margin-top: 10px;
+    font-style: 14px/2em "Open Sans", sans-serif;
+    width: 410px;
+
+}
+
+
 
 .clearfix { *zoom: 1; }
 .clearfix:before, .clearfix:after {

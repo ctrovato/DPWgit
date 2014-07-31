@@ -25,12 +25,14 @@ class MainHandler(webapp2.RequestHandler):
             q._content += answer
 
 
+
         self.response.write(q.print_out())
 
 
 class ResultsDataObject(object):
 
     def __init__(self):
+        self.search = ""
         self.queryresult = ""
         self.title = ""
         self.plaintext = ""
@@ -48,47 +50,6 @@ class SearchView(object):
     def wolfram(self):
         pass
 
-
-#
-# class Page(object):
-#
-#     _head = """<!DOCTYPE HTML>
-# <head>
-#     <title>WolfRamAlpha API</title>
-#     <link rel="stylesheet" href="css/style.css" type="text/css" />
-#     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-# </head>
-# <body><div class='wrapper'>
-#
-# """
-#     _content = '''
-#     <form action="/">
-#     <fieldset class="clearfix">
-#     <h3>SEARCH</h3>
-#     <input type = 'search' id = 'search' placeholder = 'What are you looking for?' name = "search" >
-#     <input type="submit" value="Search" class="button">
-#     </fieldset>
-#     </form>
-# '''
-#     _close = """
-# </div>
-# </body>
-# </html>"""
-#
-#     def __init__(self):
-#         pass
-#
-#     def print_out(self):
-#         return self._head + self._content + self._close
-#
-#
-#
-# #This function overides the print function
-#     def print_out(self):
-#         return self._head + self._content + self._close
-#
-#         #accept an array of dictionaries
-#         #use it to build
 
 
 
