@@ -22,9 +22,8 @@ class MainHandler(webapp2.RequestHandler):
 
             wolframModel = WolframModel()
             answer = wolframModel.search(search)
-            q._content += answer
-
-
+            q.answer = answer
+            q.search = search
 
         self.response.write(q.print_out())
 

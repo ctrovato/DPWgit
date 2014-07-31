@@ -1,6 +1,7 @@
 __author__ = 'CarmineTrovato'
 
 class HTML (object):
+
     def __init__(self):
         pass
 
@@ -48,13 +49,9 @@ class HTML (object):
 
 </form>
 
-<h3 class="resultsHeader">Your Results For "{self.search} " </h3>
+<h3 class="resultsHeader">{self.formattedSearch}</h3>
 <div class="results">
-
-'''
-    answer = '''
-
-
+    {self.answer}
 </div>
 
 </div> <!-- end search -->
@@ -67,15 +64,22 @@ class HTML (object):
     </body>
 </html>
 '''
-    def __init__(self):
-        pass
+
+    search = ''
+    answer = ''
+
+    @property
+    def formattedSearch(self):
+        if self.search == '':
+            return ''
+        else:
+            return 'Your Results For "' + self.search + '"     '
 
 
 #This function overides the print function
 
-
     def print_out(self):
-        return self._open + self._content + self.answer + self._close
+        return self._open + self._content.decode('utf-8').format(**locals()) + self._close
 
         #accept an array of dictionaries
         #use it to build

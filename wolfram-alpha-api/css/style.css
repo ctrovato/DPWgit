@@ -33,6 +33,7 @@ input[type="search"] {
     box-sizing: content-box;
 }
 
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
@@ -43,12 +44,13 @@ div#search h3.logo{
 	background-repeat: no-repeat;
 	padding-bottom: 0px;
     padding-top: 50px;
-	background-image: url('../images/WolframAlpha_logo.png');
+    left: 45%;
+	background-image: url('../images/WolframAlpha_logo2.png');
 }
 
 
 .resultsHeader{
-    margin-top: 40px;
+    margin-top: 50px;
     color: white;
 }
 
@@ -117,6 +119,7 @@ div#search h3.logo{
 	font-weight: bold;
 	margin-left: 7px;
 	padding: 6px 10px;
+	width: 70px;
 }
 
 #search input[type='submit']:hover {
