@@ -52,6 +52,7 @@ div#search h3.logo{
 .resultsHeader{
     margin-top: 50px;
     color: white;
+    width: 410px;
 }
 
 .results{

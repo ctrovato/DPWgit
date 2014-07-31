@@ -73,7 +73,12 @@ class HTML (object):
         if self.search == '':
             return ''
         else:
-            return 'Your Results For "' + self.search + '"     '
+            return ' Results For "' + self.search + '''"
+            <script>
+                var u = new SpeechSynthesisUtterance(" ''' + self.answer + ''' ");
+                speechSynthesis.speak(u);
+            </script>
+            '''
 
 
 #This function overides the print function
